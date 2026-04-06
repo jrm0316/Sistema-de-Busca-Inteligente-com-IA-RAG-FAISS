@@ -79,3 +79,6 @@ Diferenciais do projeto
   * Redução de alucinação com controle de contexto
   * Respostas com referência às páginas do documento
   * Pipeline backend bem estruturado (ingestão → processamento → busca → resposta)
+
+Autor
+  Desenvolvido por Juliano Rodrigues Madeira
