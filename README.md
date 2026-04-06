@@ -80,5 +80,5 @@ Diferenciais do projeto
   * Respostas com referência às páginas do documento
   * Pipeline backend bem estruturado (ingestão → processamento → busca → resposta)
 
-Autor
+Autor  
   Desenvolvido por Juliano Rodrigues Madeira
