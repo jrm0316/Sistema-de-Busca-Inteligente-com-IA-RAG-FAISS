@@ -4,25 +4,25 @@ Este projeto consiste em um sistema backend capaz de ler documentos PDF e respon
 Como funciona
 
 O sistema segue um pipeline completo de processamento de dados:
-1. Ingestão do PDF
-  * Leitura página por página
-  * Extração de texto
-2. Pré-processamento
-  * Limpeza de texto (remoção de quebras, espaços e ruídos)
-  * Divisão em chunks com base em frases (melhor contexto semântico)
-3. Geração de embeddings
-  * Conversão dos textos em vetores numéricos usando Sentence Transformers
-4. Indexação
-  * Armazenamento dos vetores em um índice FAISS para busca eficiente
-5. Busca semântica
-  * A pergunta do usuário é transformada em embedding
-  * O sistema busca os trechos mais relevantes do documento
-6. Geração de resposta (LLM)
-  * Um modelo de linguagem (Groq / Llama 3) responde com base no contexto recuperado
-  * A resposta inclui referência às páginas do documento
+  1. Ingestão do PDF
+    * Leitura página por página
+    * Extração de texto
+  2. Pré-processamento
+    * Limpeza de texto (remoção de quebras, espaços e ruídos)
+    * Divisão em chunks com base em frases (melhor contexto semântico)
+  3. Geração de embeddings
+    * Conversão dos textos em vetores numéricos usando Sentence Transformers
+  4. Indexação
+    * Armazenamento dos vetores em um índice FAISS para busca eficiente
+  5. Busca semântica
+    * A pergunta do usuário é transformada em embedding
+    * O sistema busca os trechos mais relevantes do documento
+  6. Geração de resposta (LLM)
+    * Um modelo de linguagem (Groq / Llama 3) responde com base no contexto recuperado
+    * A resposta inclui referência às páginas do documento
 
 Exemplo de uso
-Digite sua busca: Como o sistema operacional gerencia o processador?
+  Digite sua busca: Como o sistema operacional gerencia o processador?
 
 Resultados mais relevantes:
 [Página 102] ...
