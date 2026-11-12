@@ -1,4 +1,4 @@
-# Sistema de Busca Inteligente em PDFs com IA — RAG + FAISS
+# Sistema de Busca Inteligente em PDFs com IA - RAG + FAISS
 
 Tecnologias: Python | FAISS | Sentence Transformers | PyPDF | Groq API | Llama 3
 
