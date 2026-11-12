@@ -112,12 +112,15 @@ Após o processamento do PDF, o programa solicitará uma pergunta no terminal e 
 └── README.md            # Documentação
 
 ### Diferenciais do projeto ###
-  * Implementação de RAG completo (não apenas chat com IA)
-  * Uso de busca vetorial com FAISS
-  * Estratégia de chunking por frases (melhora contexto e relevância)
-  * Redução de alucinação com controle de contexto
-  * Respostas com referência às páginas do documento
-  * Pipeline backend bem estruturado (ingestão → processamento → busca → resposta)
+
+- Implementação de um pipeline RAG completo, integrando processamento de PDFs, embeddings, busca vetorial e geração de respostas com LLM.
+- Utilização do FAISS com índice `IndexFlatL2` para recuperação de trechos por similaridade vetorial.
+- Segmentação de textos em chunks baseada em frases, com tamanho aproximado de 800 caracteres.
+- Utilização do modelo `all-MiniLM-L6-v2` da biblioteca Sentence Transformers para geração de embeddings.
+- Recuperação dos 15 trechos mais próximos da pergunta para composição do contexto enviado ao LLM.
+- Preservação dos números das páginas dos documentos para identificação da origem dos trechos recuperados.
+- Prompt orientado a responder com base no contexto fornecido e informar quando não houver informações suficientes.
+- Organização do processamento em módulos Python separados para leitura de PDFs, busca semântica e integração com a API Groq.
 
 ### Autor ###
   Desenvolvido por Juliano Rodrigues Madeira
