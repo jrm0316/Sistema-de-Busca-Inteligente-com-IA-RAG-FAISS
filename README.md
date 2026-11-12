@@ -97,15 +97,19 @@ Após o processamento do PDF, o programa solicitará uma pergunta no terminal e 
 
 ### Estrutura do projeto ###
 
-├── app_withFAISS.py     # Pipeline principal
+├── app_withFAISS.py     # Pipeline principal de RAG
 
-├── pdf_loader2.py       # Leitura e processamento do PDF
+├── pdf_loader2.py       # Leitura e processamento de PDFs
 
-├── llm_groq.py          # Integração com o modelo de linguagem
+├── llm_groq.py          # Integração com a API Groq
 
-├── .env                 # Chave da API
+├── requirements.txt     # Dependências do projeto
 
-└── Sistemas.pdf         # Documento utilizado
+├── .env.example         # Exemplo de configuração da API
+
+├── .gitignore           # Arquivos ignorados pelo Git
+
+└── README.md            # Documentação
 
 ### Diferenciais do projeto ###
   * Implementação de RAG completo (não apenas chat com IA)
