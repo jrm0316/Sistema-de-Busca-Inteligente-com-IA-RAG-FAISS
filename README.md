@@ -2,7 +2,7 @@
 Este projeto consiste em um sistema backend capaz de ler documentos PDF e responder perguntas com base no conteúdo do próprio documento.  A aplicação utiliza o conceito de RAG (Retrieval-Augmented Generation), combinando busca semântica com modelos de linguagem para gerar respostas precisas e contextualizadas, reduzindo alucinações da IA.
 
 
-Como funciona                   
+### Como funciona ###
 O sistema segue um pipeline completo de processamento de dados:
   1. Ingestão do PDF
       * Leitura página por página
@@ -21,18 +21,17 @@ O sistema segue um pipeline completo de processamento de dados:
       * Um modelo de linguagem (Groq / Llama 3) responde com base no contexto recuperado
       * A resposta inclui referência às páginas do documento
 
-Exemplo de uso
+### Exemplo de uso ###
   Digite sua busca: Como o sistema operacional gerencia o processador?
 
 
-Resultados mais relevantes:
+### Resultados mais relevantes: ###
 
     [Página 102] ... 
     [Página 721] ...
     [Página 290] ...
 
-
-Resposta da IA:
+### Resposta da IA:
 O sistema operacional gerencia o processador por meio de um escalonador...
 (Páginas 102, 290 e 721)
 
@@ -44,24 +43,60 @@ Tecnologias utilizadas
   * PyPDF (leitura de PDF)
   * NumPy
 
-Como executar o projeto
-  1. Clone o repositório
-    git clone https://github.com/jrm0316/Sistema-de-Busca-Inteligente-com-IA-RAG-FAISS
-    cd seu-repo
-  2. Crie um ambiente virtual
-    python -m venv venv
-    venv\Scripts\activate  # Windows
-  3. Instale as dependências
-    pip install -r requirements.txt
-  4. Configure a API Key
-    Crie um arquivo .env:
-    GROQ_API_KEY=sua_chave_aqui
-  5. Execute o projeto
-    python app_withFAISS.py
+## Como executar o projeto
 
-Estrutura do projeto
+### 1. Clonar o repositório
 
-.
+```bash
+git clone https://github.com/jrm0316/Sistema-de-Busca-Inteligente-com-IA-RAG-FAISS.git
+cd Sistema-de-Busca-Inteligente-com-IA-RAG-FAISS
+```
+
+### 2. Criar e ativar um ambiente virtual
+
+No Windows (PowerShell):
+
+```powershell
+python -m venv venv
+.\venv\Scripts\Activate.ps1
+```
+
+### 3. Instalar as dependências
+
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Configurar a chave da Groq
+
+Crie um arquivo `.env` na raiz do projeto, utilizando `.env.example` como referência.
+
+Adicione sua própria chave:
+
+```env
+GROQ_API_KEY=sua_chave_aqui
+```
+
+Nunca publique sua chave verdadeira no GitHub.
+
+### 5. Adicionar um documento PDF
+
+Coloque um arquivo PDF na raiz do projeto com o nome:
+
+`Sistemas.pdf`
+
+O programa utiliza esse arquivo como documento de entrada. Para utilizar outro nome, altere o caminho informado em `app_withFAISS.py`.
+
+### 6. Executar a aplicação
+
+```bash
+python app_withFAISS.py
+```
+
+Após o processamento do PDF, o programa solicitará uma pergunta no terminal e apresentará os trechos recuperados e a resposta gerada pela IA.
+
+### Estrutura do projeto ###
+
 ├── app_withFAISS.py     # Pipeline principal
 
 ├── pdf_loader2.py       # Leitura e processamento do PDF
@@ -72,7 +107,7 @@ Estrutura do projeto
 
 └── Sistemas.pdf         # Documento utilizado
 
-Diferenciais do projeto
+### Diferenciais do projeto ###
   * Implementação de RAG completo (não apenas chat com IA)
   * Uso de busca vetorial com FAISS
   * Estratégia de chunking por frases (melhora contexto e relevância)
@@ -80,5 +115,5 @@ Diferenciais do projeto
   * Respostas com referência às páginas do documento
   * Pipeline backend bem estruturado (ingestão → processamento → busca → resposta)
 
-Autor  
+### Autor ###
   Desenvolvido por Juliano Rodrigues Madeira
