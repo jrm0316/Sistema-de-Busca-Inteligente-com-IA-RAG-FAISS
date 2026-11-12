@@ -1,5 +1,12 @@
-# Sistema-de-Busca-Inteligente-com-IA-RAG-FAISS-
-Este projeto consiste em um sistema backend capaz de ler documentos PDF e responder perguntas com base no conteúdo do próprio documento.  A aplicação utiliza o conceito de RAG (Retrieval-Augmented Generation), combinando busca semântica com modelos de linguagem para gerar respostas precisas e contextualizadas, reduzindo alucinações da IA.
+# Sistema de Busca Inteligente em PDFs com IA — RAG + FAISS
+
+Tecnologias: Python | FAISS | Sentence Transformers | PyPDF | Groq API | Llama 3
+
+Sistema desenvolvido em Python para realizar consultas inteligentes a documentos PDF utilizando a arquitetura RAG (Retrieval-Augmented Generation).
+
+A aplicação extrai e processa textos de documentos, gera embeddings com Sentence Transformers e utiliza o FAISS para recuperar trechos relevantes por similaridade vetorial. Esses trechos são enviados a um modelo de linguagem pela API Groq, permitindo gerar respostas contextualizadas com referências às páginas dos documentos.
+
+O projeto demonstra a implementação prática de um pipeline de recuperação e geração de respostas com Inteligência Artificial, desde o processamento do PDF até a interação com o modelo de linguagem.
 
 
 ### Como funciona ###
